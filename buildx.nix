@@ -4,12 +4,14 @@ buildGoModule rec {
   pname = "docker-buildx";
   version = "0.14.0";
 
-  src = fetchFromGitHub {
-    owner = "slimslenderslacks";
-    repo = "buildx";
-    rev = "master";
-    hash = "sha256-HM9oRAA01D2eG5Q0JzFVffabzcjvnLfSgTtCMlUPgW8=";
-  };
+  src = ./.;
+
+  #src = fetchFromGitHub {
+    #owner = "slimslenderslacks";
+    #repo = "buildx";
+    #rev = "master";
+    #hash = "sha256-HM9oRAA01D2eG5Q0JzFVffabzcjvnLfSgTtCMlUPgW8=";
+  #};
 
   doCheck = false;
 
